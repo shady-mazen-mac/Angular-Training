@@ -1,0 +1,15 @@
+<h1>Welcome</h1>
+<div class="container">
+  welcome works! {{name}}. You can manage your Todos <a [routerLink]="['/todos']" routerLinkActive="router-link-active"> Here</a>
+</div>
+<div class="container">
+
+  <button (click)="getWelcomeMessageWithParameter()" type="button" class="btn btn-info">Get Welcome Message</button>
+</div>
+
+
+<div class="container"  *ngIf="welcomeMessageFromService">
+<h2> Your Welcome Message</h2>
+{{welcomeMessageFromService}}
+</div>
+
